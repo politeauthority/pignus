@@ -9,7 +9,7 @@ import re
 import rsa
 import secrets
 
-from pignus_api.collections.api_keys import ApiKeys
+from pignus_api.collects.api_keys import ApiKeys
 from pignus_api.models.api_key import ApiKey
 from pignus_api.models.user import User
 from pignus_api.utils import log

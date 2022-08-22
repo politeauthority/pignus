@@ -2,7 +2,7 @@
 Gets collection of Image Clusters
 
 """
-from pignus_api.collections.base import Base
+from pignus_api.collects.base import Base
 from pignus_api.models.image_cluster import ImageCluster
 
 

@@ -5,9 +5,9 @@ from pignus_api.models.base_entity_meta import BaseEntityMeta
 from pignus_api.models.scan import Scan
 from pignus_api.models.image_build_cluster import ImageBuildCluster
 from pignus_api.models.entity_meta import EntityMeta
-from pignus_api.collections.image_build_clusters import ImageBuildClusters
-from pignus_api.collections.operations import Operations
-from pignus_api.collections.scans import Scans
+from pignus_api.collects.image_build_clusters import ImageBuildClusters
+from pignus_api.collects.operations import Operations
+from pignus_api.collects.scans import Scans
 from pignus_api.utils import xlate
 from pignus_api.utils import date_utils
 from pignus_api.utils import misc

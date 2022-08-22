@@ -29,6 +29,9 @@ def post_model():
 		"status": "Success"
 	}
 
+	print("hello")
+	print("hello2")
+	print("hello3")
 	request_data = request.get_json()
 	if "name" not in request_data:
 		resp_data["status"] = "Error"

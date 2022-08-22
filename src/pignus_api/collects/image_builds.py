@@ -1,7 +1,7 @@
 """ImageBuilds Collection.
 Gets collection of ImageBuilds
 """
-from pignus_api.collections.base_entity_metas import BaseEntityMetas
+from pignus_api.collect.base_entity_metas import BaseEntityMetas
 from pignus_api.models.image_build import ImageBuild
 from pignus_api.utils import date_utils
 from pignus_api.utils import glow

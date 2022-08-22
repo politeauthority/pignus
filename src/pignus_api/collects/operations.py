@@ -1,7 +1,7 @@
 """Operations Collection
 
 """
-from pignus_api.collections.base import Base
+from pignus_api.collects.base import Base
 from pignus_api.models.operation import Operation
 
 

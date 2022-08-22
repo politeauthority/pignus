@@ -14,7 +14,7 @@ from pignus_api.controllers.ctrl_collections.ctrl_images import ctrl_images
 from pignus_api.utils import db
 from pignus_api.utils import glow
 from pignus_api.utils import date_utils
-from pignus_api.collections.options import Options
+from pignus_api.collects.options import Options
 
 app = Flask(__name__)
 app.config.update (
@@ -37,14 +37,6 @@ def register_blueprints(app: Flask):
 
 @app.route('/')
 def index():
-    print(date_utils.now())
-    with glow.db.cursor() as cursor:
-        # Read a single record
-        sql = "SELECT * FROM `users`;"
-        cursor.execute(sql)
-        result = cursor.fetchone()
-        print(result)
-
     data = {
         'info': "Pignus Api",
         "version": "0.0.1"

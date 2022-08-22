@@ -6,14 +6,9 @@ approachable for the many different interfaces of Pignus.
 import inspect
 import sys
 
-from rich.console import Console
-from rich import print as pprint
-
 from pignus_api.utils import xlate
 from pignus_api.utils import glow
 
-
-CONSOLE = Console()
 
 
 def debug(message: str, **kwargs):

@@ -2,8 +2,8 @@
 Gets collection of Images
 
 """
-from pignus_api.collections.base_entity_metas import BaseEntityMetas
-from pignus_api.collections.image_builds import ImageBuilds
+from pignus_api.collects.base_entity_metas import BaseEntityMetas
+from pignus_api.collects.image_builds import ImageBuilds
 from pignus_api.utils import xlate
 from pignus_api.models.image import Image
 

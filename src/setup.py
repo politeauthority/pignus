@@ -12,7 +12,7 @@ setup(
     url="https://github.com/politeauthority/pignus",
     packages=[
         "pignus_api",
-        "pignus_api.collections",
+        "pignus_api.collects",
         "pignus_api.controllers",
         "pignus_api.controllers.ctrl_collections",
         "pignus_api.controllers.ctrl_models",
