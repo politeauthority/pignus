@@ -11,6 +11,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 
 from pignus_api.controllers.ctrl_models.ctrl_image import ctrl_image
 from pignus_api.controllers.ctrl_collections.ctrl_images import ctrl_images
+from pignus_api.controllers.ctrl_collections.ctrl_options import ctrl_options
 from pignus_api.utils import db
 from pignus_api.utils import glow
 from pignus_api.utils import date_utils
@@ -32,6 +33,7 @@ def register_blueprints(app: Flask):
     """Connect the blueprints to the router."""
     app.register_blueprint(ctrl_image)
     app.register_blueprint(ctrl_images)
+    app.register_blueprint(ctrl_options)
     return True
 
 

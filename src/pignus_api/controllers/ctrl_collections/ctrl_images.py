@@ -19,7 +19,8 @@ def index():
 
 	data = {
 		"objects": ret_images,
-		"object_type": "images"
+		"object_type": "images",
+		"object_count": len(ret_images)
 	}
 	return jsonify(data)
 
