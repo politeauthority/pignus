@@ -16,4 +16,4 @@ RUN cd /app && pip3 install -r /app/requirements-debug.txt
 RUN cd /app && python3 setup.py build
 RUN cd /app && python3 setup.py install
 
-# CMD cd /app/pignus_api && gunicorn app:app --bind 0.0.0.0:5001
+CMD cd /app/pignus_api && gunicorn app:app --bind 0.0.0.0:5001
