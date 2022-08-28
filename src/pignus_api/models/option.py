@@ -28,7 +28,10 @@ class Option(Base):
         self.setup()
 
     def __repr__(self):
-        return "<Option %s:%s>" % (self.name, self.value)
+        if self.name:
+            return "<Option %s:%s>" % (self.name, self.value)
+        else:
+            return "<Option>"
 
     def get_by_name(self, name: str = None) -> bool:
         """Get an option from the options table based on name. """

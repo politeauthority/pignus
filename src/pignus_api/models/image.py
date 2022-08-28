@@ -6,10 +6,10 @@ Image with different image digests.
 from pignus_api.models.base_entity_meta import BaseEntityMeta
 from pignus_api.models.image_build import ImageBuild
 from pignus_api.models.image_cluster import ImageCluster
-from pignus_api.collections.image_builds import ImageBuilds
-from pignus_api.collections.image_clusters import ImageClusters as CollectImageClusters
-from pignus_api.collections.operations import Operations
-from pignus_api.collections.scans import Scans
+from pignus_api.collects.image_builds import ImageBuilds
+from pignus_api.collects.image_clusters import ImageClusters as CollectImageClusters
+from pignus_api.collects.operations import Operations
+from pignus_api.collects.scans import Scans
 from pignus_api.utils import misc
 from pignus_api.utils import xlate
 from pignus_api.utils import date_utils
@@ -66,8 +66,10 @@ class Image(BaseEntityMeta):
         """
         if self.id:
             return "<Image %s:%s>" % (self.id, self.name)
-        else:
+        elif self.name:
             return "<Image %s>" % (self.name)
+        else:
+            return "<Image>"
 
     def build_from_dict(self, raw: dict) -> bool:
         """Builds a model by a dictionary. This is expected to be used mostly from a client making

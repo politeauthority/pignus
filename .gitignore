@@ -1,6 +1,7 @@
 # Pignus
 helpers/
 *.DS_Store
+*__pycache__/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -40,7 +40,7 @@ class ImageBuildCluster(Base):
         self.setup()
 
     def __repr__(self):
-        return "<ImageBuildCluster %s, %s>" % (self.cluster, self.image_build_id)
+        return "<ImageBuildCluster>"
 
     def get_image_build_cluster(self, image_build_id: int, cluster: str) -> bool:
         """Gets the ImageBuildCluster with a image_build_id and a cluster. """

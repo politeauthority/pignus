@@ -42,7 +42,13 @@ class ImageCluster(Base):
         self.setup()
 
     def __repr__(self):
-        return "<ImageCluster %s>" % self.id
+        """Image Cluster representation.
+        :unit-test: TestImageCluster::test____repr__
+        """
+        if self.id:
+            return "<ImageCluster %s>" % self.id
+        else:
+            return "<ImageCluster>"
 
     def get_image_cluster(self, image_id: int, cluster_id: int):
         sql_args = {

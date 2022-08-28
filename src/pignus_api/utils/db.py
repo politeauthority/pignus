@@ -1,6 +1,8 @@
 import pymysql.cursors
 
 
+from pignus_api.utils import log
+
 PIGNUS_DB_HOST="192.168.50.6"
 PIGNUS_DB_PORT=int("3307")
 PIGNUS_DB_NAME="pignus_1"
@@ -27,6 +29,8 @@ def connect():
     #     # # your changes.
     #     # connection.commit()
 
+
+    log.info("Generating database connection")
     return {
         "conn": connection,
         "cursor": connection.cursor()

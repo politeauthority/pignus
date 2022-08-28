@@ -57,6 +57,9 @@ class Operation(Base):
         self.setup()
 
     def __repr__(self):
+        """Set the class representation
+        :unit-test: TestOperation::__repr__
+        """
         if self.id and self.type:
             return "<Operation %s: %s>" % (self.id, self.type)
         else:

@@ -1,24 +1,24 @@
 # Pignus
 # Distribution / packaging
-pignus/.Python
-pignus/build/
-pignus/develop-eggs/
-pignus/dist/
-pignus/downloads/
-pignus/eggs/
-pignus/*.eggs/
-pignus/*lib/
-pignus/lib64/
-pignus/parts/
-pignus/sdist/
-pignus/var/
-pignus/wheels/
-pignus/pip-wheel-metadata/
-pignus/share/python-wheels/
-pignus/*.egg-info/
-pignus/.installed.cfg
-pignus/*.egg
-pignus/MANIFEST
+src/pignus_api/.Python
+src/pignus_api/build/
+src/pignus_api/develop-eggs/
+src/pignus_api/dist/
+src/pignus_api/downloads/
+src/pignus_api/eggs/
+src/pignus_api/*.eggs/
+src/pignus_api/*lib/
+src/pignus_api/lib64/
+src/pignus_api/parts/
+src/pignus_api/sdist/
+src/pignus_api/var/
+src/pignus_api/wheels/
+src/pignus_api/pip-wheel-metadata/
+src/pignus_api/share/python-wheels/
+src/pignus_api/*.egg-info/
+src/pignus_api/.installed.cfg
+src/pignus_api/*.egg
+src/pignus_api/MANIFEST
 
 
 

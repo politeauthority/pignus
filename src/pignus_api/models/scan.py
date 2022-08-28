@@ -97,6 +97,12 @@ class Scan(BaseEntityMeta):
         self.field_map = FIELD_MAP
         self.setup()
 
+    def __repr__(self):
+        """Set the class representation
+        :unit-test: TestScan::__repr__
+        """
+        return "<Scan>"
+
     def save(self) -> int:
         """Save a Scan record, totaling up the number of CVEs at each severity automatically prior
         to save.

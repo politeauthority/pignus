@@ -24,8 +24,6 @@ app.config.update (
 app.config['SECRET_KEY'] = "test"
 toolbar = DebugToolbarExtension(app)
 
-glow.db = db.connect()
-glow.options = Options().load_options()
 
 
 
@@ -52,12 +50,16 @@ def debug():
     return html
 
 
-
 if __name__ == "__main__":
+
+    glow.db = db.connect()
+    glow.options = Options().load_options()
     register_blueprints(app)
     app.run(host='0.0.0.0', port=5001)
 
 elif __name__ != '__main__':
+    glow.db = db.connect()
+    glow.options = Options().load_options()
     register_blueprints(app)
     gunicorn_logger = logging.getLogger('gunicorn.info')
     app.logger.handlers = gunicorn_logger.handlers

@@ -57,7 +57,12 @@ class EntityMeta(Base):
         self.setup()
 
     def __repr__(self):
-        return "<EntityMeta %s %s:%s>" % (self.entity_type, self.name, self.value)
+        """Set the class representation
+        :unit-test: TestEntityMeta::__repr__
+        """
+        if self.entity_type and self.name:
+            return "<EntityMeta %s %s:%s>" % (self.entity_type, self.name, self.value)
+        return "<EntityMeta>"
 
     def build_from_list(self, raw: list):
         """Build a model from an ordered list, converting data types to their desired type where

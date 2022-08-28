@@ -4,7 +4,7 @@
 
 from flask import Blueprint, jsonify
 
-from pignus_api.collections.options import Options
+from pignus_api.collects.options import Options
 
 
 ctrl_options = Blueprint('options', __name__, url_prefix='/options')

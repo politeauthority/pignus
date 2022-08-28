@@ -4,7 +4,7 @@
 
 from flask import Blueprint, jsonify
 
-from pignus_api.collections.images import Images
+from pignus_api.collects.images import Images
 
 
 ctrl_images = Blueprint('images', __name__, url_prefix='/images')

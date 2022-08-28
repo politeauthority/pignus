@@ -2,7 +2,7 @@
 This class should be extended by all collections that collect models that have entity meta.
 
 """
-from pignus_api.collections.base import Base
+from pignus_api.collects.base import Base
 from pignus_api.models.entity_meta import EntityMeta
 
 
