@@ -21,7 +21,9 @@ class ApiKeys(Base):
         sql = """
             SELECT *
             FROM `api_keys`
-            WHERE `user_id` = %s;
+            WHERE
+                `user_id` = %s AND
+                `enabled` = 1;
             """ % xlate.sql_safe(user_id)
         self.cursor.execute(sql)
         raws = self.cursor.fetchall()

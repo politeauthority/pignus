@@ -1,17 +1,18 @@
-"""Ctrl - Model - Image
+"""Controller Model - Image
 
 """
 
 from flask import Blueprint, request, jsonify
 
 from pignus_api.models.image import Image
+from pignus_api.utils import auth
 from pignus_api.utils import misc
-
 
 ctrl_image = Blueprint('image', __name__, url_prefix='/image')
 
 
 @ctrl_image.route("")
+@auth.auth_request
 def get_model():
 	data = {
 		"object": {}
@@ -21,6 +22,7 @@ def get_model():
  
 
 @ctrl_image.route("", methods=["POST"])
+@auth.auth_request
 def post_model():
 	"""Create a new Image
 	"""

@@ -8,6 +8,7 @@ from pignus_api.models.role import Role
 from pignus_api.collects.api_keys import ApiKeys
 from pignus_api.utils import misc
 from pignus_api.utils import log
+from pignus_api.utils import xlate
 
 
 FIELD_MAP = [
@@ -51,8 +52,28 @@ class User(BaseEntityMeta):
         else:
             return "<User>"
 
-    def check_password(self, password):
-        check_password_hash("database_record", password)
+    def auth(self, client_id, api_key_raw) -> bool:
+        """Check a User's auth ability."""
+        sql = """
+            SELECT * FROM `users`
+            WHERE `client_id`="%s"
+            LIMIT 1;""" % xlate.sql_safe(client_id)
+        self.cursor.execute(sql)
+        raw = self.cursor.fetchone()
+        if not raw:
+            return False
+        self.build_from_list(raw)
+
+
+        api_keys = ApiKeys().get_api_keys_for_user(self.id)
+        print("\n\n")
+        print(api_keys)
+
+        for api_key in api_keys:
+            if check_password_hash(api_key.key, api_key_raw):
+                return True
+
+        return False
 
     def create_random_credentials(self) -> dict:
         """Create a random password. """

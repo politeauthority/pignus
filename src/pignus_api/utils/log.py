@@ -8,6 +8,7 @@ import sys
 
 from pignus_api.utils import xlate
 from pignus_api.utils import glow
+from pignus_api.utils.misc import pp
 
 
 
@@ -59,9 +60,9 @@ def _handle_log(level, message: str, **kwargs):
     the_log = _get_base_log(message, **kwargs)
     the_log["level"] = level
     the_log["level_int"] = _eval_log_numeral(level)
-    the_log["request"] = _get_api_request_log()
-    if not the_log["request"]:
-        the_log.pop("request")
+    # the_log["request"] = _get_api_request_log()
+    # if not the_log["request"]:
+        # the_log.pop("request")
     _handle_dipslay(the_log)
     return True
 
@@ -99,9 +100,9 @@ def _get_api_request_log() -> dict:
     """Get the api gateway request details.
     :unit-test: test___get_api_request_log
     """
-    if not settings.content["path"]:
+    if not glow.content["path"]:
         return False
-    content = settings.content
+    content = glow.content
     if "api-key" in content:
         content.pop("api-key")
     return content
@@ -131,7 +132,7 @@ def _handle_dipslay(the_log: dict) -> bool:
 
 def _diplay_log(the_log) -> bool:
     """Print the log to the console or log collector."""
-    config_level = _eval_log_numeral(settings.general["LOG_LEVEL"])
+    config_level = _eval_log_numeral(glow.general["LOG_LEVEL"])
     log_level = _eval_log_numeral(the_log["level"])
     if log_level >= config_level:
         return True
@@ -146,33 +147,33 @@ def _handle_stdout_display(the_log: dict) -> bool:
 
     level = _get_level_color(the_log["level"])
     if the_log["level"] == "WARNING":
-        pprint("[%s]\t%s" % (level, the_log["message"]))
+        pp("[%s]\t%s" % (level, the_log["message"]))
     else:
-        pprint("[%s]\t\t%s" % (level, the_log["message"]))
+        pp("[%s]\t\t%s" % (level, the_log["message"]))
 
     # Display the image/build
     if "image/build" in log_keys and "image" in the_log and "build" in the_log:
-        pprint("\t\tImage:\t%s" % the_log["image"])
-        pprint("\t\tBuild:\t%s" % (the_log["build"]))
+        pp("\t\tImage:\t%s" % the_log["image"])
+        pp("\t\tBuild:\t%s" % (the_log["build"]))
     elif "image/build" in log_keys and "image" in the_log:
-        pprint("\t\tImage:\t%s" % the_log["image"])
+        pp("\t\tImage:\t%s" % the_log["image"])
     elif "image_build" in log_keys and "image_build" in the_log:
-        pprint("\t\tImageBuild:\t%s" % the_log["image_build"])
+        pp("\t\tImageBuild:\t%s" % the_log["image_build"])
     elif "image/build" in log_keys and "build" in the_log:
-        pprint("\t\tBuild:\t%s" % (the_log["build"]))
+        pp("\t\tBuild:\t%s" % (the_log["build"]))
 
     # if "stage" in the_log:
     #     pprint("\t\tStage:\t%s" % the_log["stage"])
     if "scan" in the_log:
-        pprint("\t\tScan:\t%s" % the_log["scan"])
+        pp("\t\tScan:\t%s" % the_log["scan"])
 
     for log_key, log_data in the_log.items():
         if log_key in log_keys:
             pprint("\t%s:\t%s" % (log_key.title(), log_data))
     if "exception" in the_log:
-        pprint("\t\tException:\t%s" % the_log["exception"])
+        pp("\t\tException:\t%s" % the_log["exception"])
     if "error" in the_log:
-        pprint("\tError:\t%s" % the_log["error"])
+        pp("\tError:\t%s" % the_log["error"])
     return True
 
 
