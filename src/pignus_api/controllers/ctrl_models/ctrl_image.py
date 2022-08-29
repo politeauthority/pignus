@@ -2,7 +2,7 @@
 
 """
 
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, Response
 
 from pignus_api.models.image import Image
 from pignus_api.utils import auth
@@ -11,29 +11,37 @@ from pignus_api.utils import misc
 ctrl_image = Blueprint('image', __name__, url_prefix='/image')
 
 
-@ctrl_image.route("")
+@ctrl_image.route("/<image_id>")
 @auth.auth_request
-def get_model():
+def get_model(image_id: int=None) -> Response:
+	"""
+	"""
 	data = {
-		"object": {}
+		"status": "Success",
+		"object": None,
+		"object_type": "image",
 	}
+	image = Image()
+	if not image.get_by_id(image_id):
+		data["status"] = "Error"
+		data["message"] = "Could not find Image"
+		return jsonify(data), 404
+	data["object"] = image.json()
 	return jsonify(data)
 
- 
 
 @ctrl_image.route("", methods=["POST"])
+@ctrl_image.route("/image_id>", methods=["POST"])
 @auth.auth_request
-def post_model():
-	"""Create a new Image
+def post_model(image_id: int=None):
+	"""Create a new Image or modify an existing one.
 	"""
 	resp_data = {
+		"status": "Success",
 		"object": {},
-		"status": "Success"
+		"object_type": "image",
 	}
 
-	print("hello")
-	print("hello2")
-	print("hello3")
 	request_data = request.get_json()
 	if "name" not in request_data:
 		resp_data["status"] = "Error"

@@ -40,19 +40,26 @@ class User(BaseEntityMeta):
     model_name = "user"
 
     def __init__(self, conn=None, cursor=None):
+        """Create the User instance.
+        :unit-test: TestUser::test____init__
+        """
         super(User, self).__init__(conn, cursor)
         self.table_name = "users"
+        self.entity_name = "user"
         self.metas = {}
         self.field_map = FIELD_MAP
         self.setup()
 
     def __repr__(self):
+        """Class representation.
+        :unit-test: TestUser::__repr__
+        """
         if self.id:
             return "<User %s: %s>" % (self.id, self.name)
         else:
             return "<User>"
 
-    def auth(self, client_id, api_key_raw) -> bool:
+    def auth(self, client_id: str, api_key_raw: str) -> bool:
         """Check a User's auth ability."""
         sql = """
             SELECT * FROM `users`
@@ -64,10 +71,7 @@ class User(BaseEntityMeta):
             return False
         self.build_from_list(raw)
 
-
         api_keys = ApiKeys().get_api_keys_for_user(self.id)
-        print("\n\n")
-        print(api_keys)
 
         for api_key in api_keys:
             if check_password_hash(api_key.key, api_key_raw):

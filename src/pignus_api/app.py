@@ -5,9 +5,6 @@ import json
 import logging
 
 from flask import Flask, request, jsonify
-from flask_debugtoolbar import DebugToolbarExtension
-from flask_debugtoolbar import DebugToolbarExtension
-
 
 from pignus_api.controllers.ctrl_models.ctrl_image import ctrl_image
 from pignus_api.controllers.ctrl_models.ctrl_user import ctrl_user
@@ -24,8 +21,6 @@ app = Flask(__name__)
 app.config.update (
     DEBUG = True,
 )
-app.config['SECRET_KEY'] = "test"
-toolbar = DebugToolbarExtension(app)
 
 
 def register_blueprints(app: Flask):

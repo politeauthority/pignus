@@ -4,7 +4,7 @@ from setuptools import setup
 from pignus_api import version
 
 setup(
-    name="pignus_api",
+    name="pignus",
     version=version.__version__,
     description="Pignus",
     author="Alix",
@@ -18,6 +18,7 @@ setup(
         "pignus_api.controllers.ctrl_models",
         "pignus_api.models",
         "pignus_api.utils",
+        "pignus_client",
     ],
     # scripts=["scripts/pignus"],
 )

@@ -36,11 +36,12 @@ class ApiKey(Base):
     model_name = "api_key"
 
     def __init__(self, conn=None, cursor=None):
-        """Create the Cluster instance.
+        """Create the Api Key instance.
         :unit-test: TestApiKey::test____init__
         """
         super(ApiKey, self).__init__(conn, cursor)
         self.table_name = "api_keys"
+        self.entity_name = "api_key"
         self.field_map = FIELD_MAP
         self.setup()
 

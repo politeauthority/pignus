@@ -13,8 +13,7 @@ from pignus_api.models.user import User
 
 
 def auth_request(f):
-    """Authentication decorator
-    """
+    """Authentication decorator."""
     @wraps(f)
     def decorator(*args, **kwargs):
         data = {
@@ -42,12 +41,6 @@ def auth_request(f):
         if not user.auth(client_id, api_key):
             return make_response(jsonify({"message": "Invalid token!"}), 401)
         # Return the user information attached to the token
-        print("\n\n")
-        print(user)
-        print(args)
-        print(kwargs)
-        print("\n\n")
-
         return f(**kwargs)
     return decorator
 

@@ -1,4 +1,4 @@
-"""Control Collects - Options
+"""Controller Collects - Options
 
 """
 
@@ -8,6 +8,7 @@ from pignus_api.collects.options import Options
 from pignus_api.utils import auth
 
 ctrl_options = Blueprint('options', __name__, url_prefix='/options')
+
 
 @ctrl_options.route('')
 @auth.auth_request

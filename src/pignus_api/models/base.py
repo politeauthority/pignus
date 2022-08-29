@@ -30,6 +30,8 @@ class Base:
         self.backend = "mysql"
 
         self.table_name = None
+        self.entity_name = None
+
         self.base_map = [
             {
                 'name': 'id',

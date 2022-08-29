@@ -10,6 +10,7 @@ from pignus_api.utils import auth
 
 ctrl_images = Blueprint('images', __name__, url_prefix='/images')
 
+
 @ctrl_images.route('')
 @auth.auth_request
 def index():
@@ -21,7 +22,7 @@ def index():
 
 	data = {
 		"objects": ret_images,
-		"object_type": "images",
+		"object_type": "image",
 		"object_count": len(ret_images)
 	}
 	return jsonify(data)

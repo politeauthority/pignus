@@ -6,10 +6,10 @@ approachable for the many different interfaces of Pignus.
 import inspect
 import sys
 
+from rich import print as pprint
+
 from pignus_api.utils import xlate
 from pignus_api.utils import glow
-from pignus_api.utils.misc import pp
-
 
 
 def debug(message: str, **kwargs):
@@ -147,33 +147,33 @@ def _handle_stdout_display(the_log: dict) -> bool:
 
     level = _get_level_color(the_log["level"])
     if the_log["level"] == "WARNING":
-        pp("[%s]\t%s" % (level, the_log["message"]))
+        pprint("[%s]\t%s" % (level, the_log["message"]))
     else:
-        pp("[%s]\t\t%s" % (level, the_log["message"]))
+        pprint("[%s]\t\t%s" % (level, the_log["message"]))
 
     # Display the image/build
     if "image/build" in log_keys and "image" in the_log and "build" in the_log:
-        pp("\t\tImage:\t%s" % the_log["image"])
-        pp("\t\tBuild:\t%s" % (the_log["build"]))
+        pprint("\t\tImage:\t%s" % the_log["image"])
+        pprint("\t\tBuild:\t%s" % (the_log["build"]))
     elif "image/build" in log_keys and "image" in the_log:
-        pp("\t\tImage:\t%s" % the_log["image"])
+        pprint("\t\tImage:\t%s" % the_log["image"])
     elif "image_build" in log_keys and "image_build" in the_log:
-        pp("\t\tImageBuild:\t%s" % the_log["image_build"])
+        pprint("\t\tImageBuild:\t%s" % the_log["image_build"])
     elif "image/build" in log_keys and "build" in the_log:
-        pp("\t\tBuild:\t%s" % (the_log["build"]))
+        pprint("\t\tBuild:\t%s" % (the_log["build"]))
 
     # if "stage" in the_log:
     #     pprint("\t\tStage:\t%s" % the_log["stage"])
     if "scan" in the_log:
-        pp("\t\tScan:\t%s" % the_log["scan"])
+        pprint("\t\tScan:\t%s" % the_log["scan"])
 
     for log_key, log_data in the_log.items():
         if log_key in log_keys:
             pprint("\t%s:\t%s" % (log_key.title(), log_data))
     if "exception" in the_log:
-        pp("\t\tException:\t%s" % the_log["exception"])
+        pprint("\t\tException:\t%s" % the_log["exception"])
     if "error" in the_log:
-        pp("\tError:\t%s" % the_log["error"])
+        pprint("\tError:\t%s" % the_log["error"])
     return True
 
 
