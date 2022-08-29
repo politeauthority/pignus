@@ -12,21 +12,23 @@ def get_model(model, entity_id: int=None) -> dict:
     """Base GET operation for a model.
     :unit-test: TestCtrlModelsBase::test__get_model
     """
+    entity = model()
+
     data = {
-        "status": "Error"
+        "status": "Error",
+        "message": "",
+        "object": {},
+        "object_type": entity.model_name
     }
     if not entity_id:
         data["message"] = "Missing entity ID"
         return make_response(jsonify(data), 401)
-    entity = model()
-
-    data["status"] ="Success"
-    data["object_type"] = entity.entity_name
 
     if not entity.get_by_id(entity_id):
         data["message"] = "Could not find Entity"
         return make_response(jsonify(data), 404)
-    
+
+    data["status"] ="Success"    
     data["object"] = entity.json()
     return data
 
@@ -38,9 +40,9 @@ def post_model(model, entity_id: int=None):
     }
     request_data = request.get_json()
 
-    print("\n\n")
-    print(request_data)
-    print("\n\n")
+    # print("\n\n")
+    # print(request_data)
+    # print("\n\n")
 
     entity = model()
 
@@ -69,6 +71,23 @@ def post_model(model, entity_id: int=None):
 
     # user.save()
     # resp_data["object"] = user.json()
+    return data
+
+
+def delete_model(model, entity_id: int):
+    """Base DELETE a model."""
+    entity = model()
+    data = {
+        "status": "Success",
+        "object_type": entity.model_name
+    }
+    if not entity.get_by_id(entity_id):
+        data["status"] = "Error"
+        data["message"] = "Entity not found"
+        return make_response(jsonify(data), 404)
+    entity.delete()
+    data["message"] = "User deleted successfully"
+    data["object"] = entity.json()
     return data
 
 

@@ -19,11 +19,14 @@ def get_model(image_id: int=None) -> Response:
 	"""
 	"""
 	data = ctrl_base.get_model(Image, image_id)
+	if not isinstance(data, dict):
+		return data
+
 	return jsonify(data)
 
 
 @ctrl_image.route("", methods=["POST"])
-@ctrl_image.route("/image_id>", methods=["POST"])
+@ctrl_image.route("/<image_id>", methods=["POST"])
 @auth.auth_request
 def post_model(image_id: int=None):
 	"""Create a new Image or modify an existing one.
@@ -60,6 +63,19 @@ def post_model(image_id: int=None):
 	resp_data["ext"] = image_parsed
 	resp_data["object"] = image.json()
 	return jsonify(resp_data)
+
+
+@ctrl_image.route("/<image_id>", methods=["DELETE"])
+@auth.auth_request
+def delete_model(image_id: int=None) -> Response:
+	"""DELETE opperation for Image.
+	"""
+	data = ctrl_base.delete_model(Image, image_id)
+	if not isinstance(data, dict):
+		return data
+
+
+	return jsonify(data), 201
 
 
 # End File: pignus/src/pignus_api/controllers/ctrl_modles/ctrl_image.py

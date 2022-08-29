@@ -45,7 +45,6 @@ class User(BaseEntityMeta):
         """
         super(User, self).__init__(conn, cursor)
         self.table_name = "users"
-        self.entity_name = "user"
         self.metas = {}
         self.field_map = FIELD_MAP
         self.setup()

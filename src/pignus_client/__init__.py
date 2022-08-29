@@ -9,7 +9,7 @@ class PignusClient:
 
     def __init__(self, api_url: str = None, api_client_id: str = None, api_key: str = None):
         """
-        :unit-test: TestRest.test____init__()
+        :unit-test: TestRest::test____init__()
         """
         if api_url:
             self.api_url = api_url
@@ -29,7 +29,7 @@ class PignusClient:
         self.die_response_level = None
         self.headers = {
             "x-api-key": self.api_key,
-            "client-id": self.api_client_id
+            "client-id": self.api_client_id,
             "Content-Type": "application/json",
             # "User-Agent": settings.client["API_UA"],
         }
@@ -42,7 +42,7 @@ class PignusClient:
 
     def images_get(self, payload: dict = {}) -> dict:
         """Get Images on the Pignus Api, against /images
-        :unit-test: TestClient:test__images_get
+        :unit-test: TestRest:test__images_get
         """
         response = self.request("images", payload)
         return response
