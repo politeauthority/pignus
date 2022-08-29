@@ -4,6 +4,7 @@
 
 from flask import Blueprint, request, jsonify, Response
 
+from pignus_api.controllers.ctrl_models import ctrl_base
 from pignus_api.models.image import Image
 from pignus_api.utils import auth
 from pignus_api.utils import misc
@@ -11,22 +12,13 @@ from pignus_api.utils import misc
 ctrl_image = Blueprint('image', __name__, url_prefix='/image')
 
 
+@ctrl_image.route("")
 @ctrl_image.route("/<image_id>")
 @auth.auth_request
 def get_model(image_id: int=None) -> Response:
 	"""
 	"""
-	data = {
-		"status": "Success",
-		"object": None,
-		"object_type": "image",
-	}
-	image = Image()
-	if not image.get_by_id(image_id):
-		data["status"] = "Error"
-		data["message"] = "Could not find Image"
-		return jsonify(data), 404
-	data["object"] = image.json()
+	data = ctrl_base.get_model(Image, image_id)
 	return jsonify(data)
 
 

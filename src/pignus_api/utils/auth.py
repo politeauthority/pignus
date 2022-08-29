@@ -10,6 +10,7 @@ from flask import request, make_response, jsonify
 from werkzeug import security
 
 from pignus_api.models.user import User
+from pignus_api.utils import log
 
 
 def auth_request(f):
@@ -25,7 +26,9 @@ def auth_request(f):
         if 'client_id' in request.headers:
             client_id = request.headers['client_id']
         if not client_id:
-            data["message"] = "A valid Client ID is missing"
+            msg = "A valid Client ID is missing"
+            data["message"] = msg
+            log.warning(msg)
             return make_response(jsonify(data), 401)
 
         # Get the Api Key
@@ -34,12 +37,15 @@ def auth_request(f):
             api_key = request.headers['x-api-key']
 
         if not api_key: # throw error if no token provided
-            data["message"] = "A valid Api Key is missing"
+            msg =  "A valid Api Key is missing"
+            data["message"] = msg
+            log.warning(msg)
             return make_response(jsonify(data), 401)
 
         user = User()
         if not user.auth(client_id, api_key):
-            return make_response(jsonify({"message": "Invalid token!"}), 401)
+            log.warning(msg)
+            return make_response(jsonify(data), 401)
         # Return the user information attached to the token
         return f(**kwargs)
     return decorator

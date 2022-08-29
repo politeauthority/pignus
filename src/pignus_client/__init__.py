@@ -29,6 +29,7 @@ class PignusClient:
         self.die_response_level = None
         self.headers = {
             "x-api-key": self.api_key,
+            "client-id": self.api_client_id
             "Content-Type": "application/json",
             # "User-Agent": settings.client["API_UA"],
         }

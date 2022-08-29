@@ -8,7 +8,6 @@ from pignus_api.utils import misc
 from pignus_api.utils import log
 
 
-
 def get_model(model, entity_id: int=None) -> dict:
     """Base GET operation for a model.
     :unit-test: TestCtrlModelsBase::test__get_model
