@@ -1,0 +1,487 @@
+./pignus_client/__init__.py:9:1: E302 expected 2 blank lines, found 1
+./pignus_client/__init__.py:95:49: W292 no newline at end of file
+./pignus_shared/utils/log.py:65:9: E116 unexpected indentation (comment)
+./pignus_sentry/pignus_sentry.py:26:1: E305 expected 2 blank lines after class or function definition, found 1
+./build/lib/pignus_client/__init__.py:9:1: E302 expected 2 blank lines, found 1
+./build/lib/pignus_client/__init__.py:95:49: W292 no newline at end of file
+./build/lib/pignus_shared/utils/docker.py:11:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:12:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:13:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:14:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:15:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:27:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:28:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:29:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:30:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:31:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/docker.py:32:1: W191 indentation contains tabs
+./build/lib/pignus_shared/utils/log.py:65:9: E116 unexpected indentation (comment)
+./build/lib/pignus_sentry/pignus_sentry.py:26:1: E305 expected 2 blank lines after class or function definition, found 1
+./build/lib/pignus_api/app.py:4:1: F401 'json' imported but unused
+./build/lib/pignus_api/app.py:7:1: F401 'flask.request' imported but unused
+./build/lib/pignus_api/app.py:19:1: F401 'pignus_api.utils.date_utils' imported but unused
+./build/lib/pignus_api/app.py:23:18: E211 whitespace before '('
+./build/lib/pignus_api/app.py:24:10: E251 unexpected spaces around keyword / parameter equals
+./build/lib/pignus_api/app.py:24:12: E251 unexpected spaces around keyword / parameter equals
+./build/lib/pignus_api/migrate.py:5:1: E303 too many blank lines (3)
+./build/lib/pignus_api/migrate.py:13:1: E302 expected 2 blank lines, found 1
+./build/lib/pignus_api/migrate.py:41:1: E305 expected 2 blank lines after class or function definition, found 1
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:5:1: F401 'flask.request' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:10:1: F401 'pignus_shared.utils.misc' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:11:1: F401 'pignus_shared.utils.log' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:24:1: E101 indentation contains mixed spaces and tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:24:1: W293 blank line contains whitespace
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:28:28: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:28:29: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:29:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:30:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:31:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:37:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:38:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:39:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:40:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:42:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:43:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:44:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:45:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:46:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:47:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:48:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:49:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:50:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_user.py:51:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:5:1: F401 'flask.request' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:8:1: F401 'pignus_api.models.image.Image' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:10:1: F401 'pignus_shared.utils.misc' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:18:34: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:18:35: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:21:29: F821 undefined name 'ImageBuild'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:30:37: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:30:38: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:31:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:32:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:33:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:33:32: F821 undefined name 'ImageBuild'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:34:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:35:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:38:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image_build.py:38:2: E303 too many blank lines (2)
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:20:28: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:20:29: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:34:29: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:34:30: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:65:9: E124 closing bracket does not match visual indentation
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:73:31: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:73:32: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:102:16: E702 multiple statements on one line (semicolon)
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_image.py:119:1: E302 expected 2 blank lines, found 1
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:5:1: F401 'flask.Blueprint' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:7:1: F401 'pignus_shared.utils.misc' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:8:1: F401 'pignus_shared.utils.log' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:11:36: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:11:37: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:31:21: E225 missing whitespace around operator
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:31:30: W291 trailing whitespace
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:36:37: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:36:38: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:59:13: F821 undefined name 'resp_data'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:60:13: F821 undefined name 'resp_data'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:60:67: F821 undefined name 'user_id'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:61:28: F821 undefined name 'resp_data'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_base.py:95:1: E303 too many blank lines (3)
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:7:1: F401 'pignus_api.models.api_key.ApiKey' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:9:1: F401 'pignus_shared.utils.misc' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:10:1: F401 'pignus_shared.utils.log' imported but unused
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:23:9: F821 undefined name 'User'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:24:24: F821 undefined name 'user_id'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:27:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:28:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:29:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:31:1: E101 indentation contains mixed spaces and tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:31:1: W293 blank line contains whitespace
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:35:31: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:35:32: E252 missing whitespace around parameter equals
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:36:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:37:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:38:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:39:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:40:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:42:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:43:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:43:10: F821 undefined name 'User'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:44:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:45:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:45:10: F821 undefined name 'User'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:45:27: F821 undefined name 'user_id'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:46:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:47:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:48:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:48:58: F821 undefined name 'user_id'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:49:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:51:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:52:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:54:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:55:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:57:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:58:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:59:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:65:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:66:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:67:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:68:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:70:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:70:9: F821 undefined name 'User'
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:71:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:72:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:73:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:74:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:75:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:76:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:77:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:78:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_models/ctrl_api_key.py:79:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:16:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:17:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:18:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_options.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:17:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:18:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:27:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:28:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:29:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:17:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:27:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:28:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:17:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:21:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:27:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_images.py:28:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:13:1: E302 expected 2 blank lines, found 1
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:16:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:17:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:19:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:20:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:22:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:23:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:24:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:25:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:26:1: W191 indentation contains tabs
+./build/lib/pignus_api/controllers/ctrl_collections/ctrl_users.py:28:1: W191 indentation contains tabs
+./build/lib/pignus_api/models/scan.py:155:49: W292 no newline at end of file
+./build/lib/pignus_api/models/base.py:565:48: E712 comparison to False should be 'if cond is not False:' or 'if cond:'
+./build/lib/pignus_api/models/image_cluster.py:85:58: W292 no newline at end of file
+./build/lib/pignus_api/models/role.py:49:49: W292 no newline at end of file
+./build/lib/pignus_api/models/migrations.py:51:54: W292 no newline at end of file
+./build/lib/pignus_api/models/operation.py:102:54: W292 no newline at end of file
+./build/lib/pignus_api/models/option.py:135:51: W292 no newline at end of file
+./build/lib/pignus_api/models/entity_meta.py:80:101: E501 line too long (101 > 100 characters)
+./build/lib/pignus_api/models/entity_meta.py:99:101: E501 line too long (116 > 100 characters)
+./build/lib/pignus_api/utils/migrate.py:14:1: F401 'pignus_api.utils.glow' imported but unused
+./build/lib/pignus_api/utils/migrate.py:41:47: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:43:51: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:44:9: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:45:9: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:57:47: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:58:48: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:145:32: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:146:33: F821 undefined name 'settings'
+./build/lib/pignus_api/utils/migrate.py:289:51: W292 no newline at end of file
+./build/lib/pignus_api/utils/auth.py:39:24: E261 at least two spaces before inline comment
+./build/lib/pignus_api/utils/auth.py:40:18: E222 multiple spaces after operator
+./build/lib/pignus_api/utils/auth.py:105:48: W292 no newline at end of file
+./build/lib/pignus_api/utils/xlate.py:77:16: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+./build/lib/pignus_api/utils/xlate.py:79:16: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+./build/lib/pignus_api/utils/xlate.py:182:101: E501 line too long (106 > 100 characters)
+./build/lib/pignus_api/utils/xlate.py:236:49: W292 no newline at end of file
+./build/lib/pignus_api/utils/glow.py:13:1: W191 indentation contains tabs
+./build/lib/pignus_api/utils/db.py:6:15: E225 missing whitespace around operator
+./build/lib/pignus_api/utils/db.py:7:15: E225 missing whitespace around operator
+./build/lib/pignus_api/utils/db.py:8:15: E225 missing whitespace around operator
+./build/lib/pignus_api/utils/db.py:9:15: E225 missing whitespace around operator
+./build/lib/pignus_api/utils/db.py:10:15: E225 missing whitespace around operator
+./build/lib/pignus_api/utils/db.py:33:5: E303 too many blank lines (2)
+./build/lib/pignus_api/collects/base.py:158:101: E501 line too long (101 > 100 characters)
+./build/lib/pignus_api/collects/options.py:32:57: W292 no newline at end of file
+./build/lib/pignus_api/collects/image_build_clusters.py:11:1: E303 too many blank lines (3)
+./build/lib/pignus_api/collects/base_entity_metas.py:72:67: W292 no newline at end of file
+./build/lib/pignus_api/collects/image_builds.py:146:101: E501 line too long (101 > 100 characters)
+./pignus_api/app.py:4:1: F401 'json' imported but unused
+./pignus_api/app.py:7:1: F401 'flask.request' imported but unused
+./pignus_api/app.py:19:1: F401 'pignus_api.utils.date_utils' imported but unused
+./pignus_api/app.py:23:18: E211 whitespace before '('
+./pignus_api/app.py:24:10: E251 unexpected spaces around keyword / parameter equals
+./pignus_api/app.py:24:12: E251 unexpected spaces around keyword / parameter equals
+./pignus_api/migrate.py:5:1: E303 too many blank lines (3)
+./pignus_api/migrate.py:13:1: E302 expected 2 blank lines, found 1
+./pignus_api/migrate.py:41:1: E305 expected 2 blank lines after class or function definition, found 1
+./pignus_api/controllers/ctrl_models/ctrl_user.py:5:1: F401 'flask.request' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_user.py:10:1: F401 'pignus_shared.utils.misc' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_user.py:11:1: F401 'pignus_shared.utils.log' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_user.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:22:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:24:1: E101 indentation contains mixed spaces and tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:24:1: W293 blank line contains whitespace
+./pignus_api/controllers/ctrl_models/ctrl_user.py:28:28: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_user.py:28:29: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_user.py:29:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:30:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:31:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:37:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:38:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:39:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:40:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:42:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:43:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:44:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:45:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:46:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:47:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:48:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:49:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:50:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_user.py:51:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:5:1: F401 'flask.request' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:8:1: F401 'pignus_api.models.image.Image' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:10:1: F401 'pignus_shared.utils.misc' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:18:34: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:18:35: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:20:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:21:29: F821 undefined name 'ImageBuild'
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:22:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:23:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:30:37: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:30:38: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:31:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:32:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:33:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:33:32: F821 undefined name 'ImageBuild'
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:34:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:35:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:38:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_image_build.py:38:2: E303 too many blank lines (2)
+./pignus_api/controllers/ctrl_models/ctrl_image.py:20:28: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image.py:20:29: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image.py:34:29: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image.py:34:30: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image.py:65:9: E124 closing bracket does not match visual indentation
+./pignus_api/controllers/ctrl_models/ctrl_image.py:73:31: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image.py:73:32: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_image.py:102:16: E702 multiple statements on one line (semicolon)
+./pignus_api/controllers/ctrl_models/ctrl_image.py:119:1: E302 expected 2 blank lines, found 1
+./pignus_api/controllers/ctrl_models/ctrl_base.py:5:1: F401 'flask.Blueprint' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_base.py:7:1: F401 'pignus_shared.utils.misc' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_base.py:8:1: F401 'pignus_shared.utils.log' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_base.py:11:36: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_base.py:11:37: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_base.py:31:21: E225 missing whitespace around operator
+./pignus_api/controllers/ctrl_models/ctrl_base.py:31:30: W291 trailing whitespace
+./pignus_api/controllers/ctrl_models/ctrl_base.py:36:37: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_base.py:36:38: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_base.py:59:13: F821 undefined name 'resp_data'
+./pignus_api/controllers/ctrl_models/ctrl_base.py:60:13: F821 undefined name 'resp_data'
+./pignus_api/controllers/ctrl_models/ctrl_base.py:60:67: F821 undefined name 'user_id'
+./pignus_api/controllers/ctrl_models/ctrl_base.py:61:28: F821 undefined name 'resp_data'
+./pignus_api/controllers/ctrl_models/ctrl_base.py:95:1: E303 too many blank lines (3)
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:7:1: F401 'pignus_api.models.api_key.ApiKey' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:9:1: F401 'pignus_shared.utils.misc' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:10:1: F401 'pignus_shared.utils.log' imported but unused
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:20:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:22:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:23:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:23:9: F821 undefined name 'User'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:24:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:24:24: F821 undefined name 'user_id'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:26:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:27:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:28:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:29:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:31:1: E101 indentation contains mixed spaces and tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:31:1: W293 blank line contains whitespace
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:35:31: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:35:32: E252 missing whitespace around parameter equals
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:36:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:37:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:38:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:39:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:40:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:42:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:43:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:43:10: F821 undefined name 'User'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:44:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:45:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:45:10: F821 undefined name 'User'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:45:27: F821 undefined name 'user_id'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:46:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:47:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:48:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:48:58: F821 undefined name 'user_id'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:49:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:51:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:52:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:54:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:55:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:57:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:58:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:59:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:65:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:66:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:67:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:68:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:70:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:70:9: F821 undefined name 'User'
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:71:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:72:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:73:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:74:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:75:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:76:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:77:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:78:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_models/ctrl_api_key.py:79:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:16:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:17:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:18:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:22:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:23:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:24:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_options.py:26:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:17:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:18:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:20:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:22:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:24:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:26:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:27:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:28:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_api_keys.py:29:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:17:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:20:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:23:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:24:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:26:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:27:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_image_builds.py:28:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:17:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:20:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:21:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:23:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:24:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:26:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:27:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_images.py:28:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:13:1: E302 expected 2 blank lines, found 1
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:16:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:17:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:19:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:20:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:22:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:23:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:24:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:25:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:26:1: W191 indentation contains tabs
+./pignus_api/controllers/ctrl_collections/ctrl_users.py:28:1: W191 indentation contains tabs
+./pignus_api/models/scan.py:155:49: W292 no newline at end of file
+./pignus_api/models/base.py:565:48: E712 comparison to False should be 'if cond is not False:' or 'if cond:'
+./pignus_api/models/image_cluster.py:85:58: W292 no newline at end of file
+./pignus_api/models/role.py:49:49: W292 no newline at end of file
+./pignus_api/models/migrations.py:51:54: W292 no newline at end of file
+./pignus_api/models/operation.py:102:54: W292 no newline at end of file
+./pignus_api/models/option.py:135:51: W292 no newline at end of file
+./pignus_api/models/entity_meta.py:80:101: E501 line too long (101 > 100 characters)
+./pignus_api/models/entity_meta.py:99:101: E501 line too long (116 > 100 characters)
+./pignus_api/utils/migrate.py:14:1: F401 'pignus_api.utils.glow' imported but unused
+./pignus_api/utils/migrate.py:41:47: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:43:51: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:44:9: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:45:9: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:57:47: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:58:48: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:145:32: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:146:33: F821 undefined name 'settings'
+./pignus_api/utils/migrate.py:289:51: W292 no newline at end of file
+./pignus_api/utils/auth.py:39:24: E261 at least two spaces before inline comment
+./pignus_api/utils/auth.py:40:18: E222 multiple spaces after operator
+./pignus_api/utils/auth.py:105:48: W292 no newline at end of file
+./pignus_api/utils/xlate.py:77:16: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+./pignus_api/utils/xlate.py:79:16: E712 comparison to False should be 'if cond is False:' or 'if not cond:'
+./pignus_api/utils/xlate.py:182:101: E501 line too long (106 > 100 characters)
+./pignus_api/utils/xlate.py:236:49: W292 no newline at end of file
+./pignus_api/utils/glow.py:13:1: W191 indentation contains tabs
+./pignus_api/utils/db.py:6:15: E225 missing whitespace around operator
+./pignus_api/utils/db.py:7:15: E225 missing whitespace around operator
+./pignus_api/utils/db.py:8:15: E225 missing whitespace around operator
+./pignus_api/utils/db.py:9:15: E225 missing whitespace around operator
+./pignus_api/utils/db.py:10:15: E225 missing whitespace around operator
+./pignus_api/utils/db.py:33:5: E303 too many blank lines (2)
+./pignus_api/collects/base.py:158:101: E501 line too long (101 > 100 characters)
+./pignus_api/collects/options.py:32:57: W292 no newline at end of file
+./pignus_api/collects/image_build_clusters.py:11:1: E303 too many blank lines (3)
+./pignus_api/collects/base_entity_metas.py:72:67: W292 no newline at end of file
+./pignus_api/collects/image_builds.py:145:87: W291 trailing whitespace
