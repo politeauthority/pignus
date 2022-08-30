@@ -4,6 +4,7 @@
 
 from pignus_api.models.user import User
 from pignus_api.models.api_key import ApiKey
+from pignus_api.models.option import Option
 from pignus_api.utils import glow
 from pignus_api.utils import db
 from pignus_api.utils import auth
@@ -29,9 +30,18 @@ def create_user():
     )
 
 
+def create_option_defaults():
+    option = Option()
+    option.name = "DEFAULT_SCANNER"
+    option.type = "str"
+    option.value = 1
+    option.save()
+    log.info("Created option: %s" % option)
+
 if __name__ == "__main__":
     glow.db = db.connect()
-    create_user()
+    # create_option_defaults()
+    # create_user()
 
 
 # End File: pignus/src/pignus_api/migrate.py

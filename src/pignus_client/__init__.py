@@ -4,6 +4,7 @@
 import requests
 import os
 
+from pignus_shared.utils import log
 
 class PignusClient:
 
@@ -39,6 +40,13 @@ class PignusClient:
         :unit-test: TestRest::test____repr__
         """
         return "<PignusClient>"
+
+    def image_add(self, payload: dict = {}) -> dict:
+        """Submit a potentially new Image to the Pignus Api, which will be translated to a new
+        ImageBuild on the server.
+        """
+        response = self.request("image/add", payload, "POST")
+        return response
 
     def images_get(self, payload: dict = {}) -> dict:
         """Get Images on the Pignus Api, against /images

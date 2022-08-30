@@ -120,7 +120,6 @@ class ImageBuild(BaseEntityMeta):
             LIMIT 1; """
         digest = xlate.sql_safe(digest)
         self.cursor.execute(sql, {"digest": digest})
-
         raw = self.cursor.fetchone()
         if not raw:
             return False
@@ -208,7 +207,7 @@ class ImageBuild(BaseEntityMeta):
         """Create a JSON friendly output of the model, converting types to friendlies. Add Scan to
         the return.
         """
-        default_scanner = settings.options["DEFAULT_SCANNER"].value
+        default_scanner = glow.options["DEFAULT_SCANNER"].value
         json_ret = super(ImageBuild, self).json()
         last_scan = Scans().get_last(self.id, scanner_id=default_scanner)
         if last_scan:

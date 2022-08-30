@@ -9,6 +9,7 @@ from pignus_api.models.image import Image
 from pignus_api.models.image_build import ImageBuild
 from pignus_api.utils import auth
 from pignus_shared.utils import misc
+from pignus_shared.utils import log
 
 ctrl_image = Blueprint('image', __name__, url_prefix='/image')
 
@@ -17,7 +18,8 @@ ctrl_image = Blueprint('image', __name__, url_prefix='/image')
 @ctrl_image.route("/<image_id>")
 @auth.auth_request
 def get_model(image_id: int=None) -> Response:
-    """
+    """GET operation for a Image.
+    GET /image
     """
     data = ctrl_base.get_model(Image, image_id)
     if not isinstance(data, dict):
@@ -30,7 +32,7 @@ def get_model(image_id: int=None) -> Response:
 @ctrl_image.route("/<image_id>", methods=["POST"])
 @auth.auth_request
 def post_model(image_id: int=None):
-    """Create a new Image or modify an existing one.
+    """POST operation for a Image.
     """
     resp_data = {
         "status": "Success",
@@ -69,15 +71,14 @@ def post_model(image_id: int=None):
 @ctrl_image.route("/<image_id>", methods=["DELETE"])
 @auth.auth_request
 def delete_model(image_id: int=None) -> Response:
-    """DELETE opperation for Image.
+    """DELETE opperation for a Image.
+    DELETE /image
     """
     data = ctrl_base.delete_model(Image, image_id)
     if not isinstance(data, dict):
         return data
 
-
     return jsonify(data), 201
-
 
 
 @ctrl_image.route("/add", methods=["POST"])
@@ -85,17 +86,47 @@ def delete_model(image_id: int=None) -> Response:
 def add() -> Response:
     """Route for adding an Image and ImageBuild in a single request.
     POST /image/add
-
     """
-    entity = Image()
+    request_data = request.get_json()
+    image = Image()
+    image_build = None
+
+    if "name" in request_data:
+        image.get_by_name(request_data["name"])
+    else:
+        image.name = request_data["name"]
+        image.repositories = [request_data["repository"]]
+        image.save()
+        image_build = create_image_build(image, request_data)
+
+    if not image_build:
+        image_build = ImageBuild()
+        if not image_build.get_by_digest(request_data["digest"]):
+            image_build = create_image_build(image, request_data)
+
+    log.info(image)
+    log.info(image_build)
     data = {
         "status": "Error",
         "message": "",
-        "object": {},
-        "object_type": entity.model_name
+        "object": image.json(),
+        "object_type": "image"
     }
 
     return jsonify(data), 201
+
+def create_image_build(image, image_url):
+    """
+    """
+    image_build = ImageBuild()
+    image_build.image_id = image.id
+    if "digest" in image_url:
+        image_build.digest = image_url["digest"]
+    if "tag" in image_url:
+        image_build.tag = image_url["tag"]
+    if "repository" in image_url:
+        image_build.repository = image_url["repository"]
+    image_build.save()
 
 
 # End File: pignus/src/pignus_api/controllers/ctrl_modles/ctrl_image.py

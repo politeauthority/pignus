@@ -3,6 +3,8 @@ helpers/
 *.DS_Store
 *__pycache__/
 
+docker/pignus-api/src
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
