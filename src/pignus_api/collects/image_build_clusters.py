@@ -4,7 +4,7 @@ Gets collection of Image Build Clusters
 """
 from pignus_api.collects.base import Base
 from pignus_api.models.image_build_cluster import ImageBuildCluster
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 
 
 class ImageBuildClusters(Base):

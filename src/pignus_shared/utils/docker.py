@@ -4,13 +4,18 @@ Utilities for working with the Docker engine.
 """
 import subprocess
 
+from pignus_shared.utils import log
 from pignus_shared.utils import misc
 
 
 def get_host_docker_images() -> list:
     """Get Docker images on the host machine."""
     cmd = "docker ps --format '{{ .ID }},{{.Image}}' --no-trunc"
-    docker_ps = subprocess.check_output(cmd, shell=True)
+    try:
+        docker_ps = subprocess.check_output(cmd, shell=True)
+    except subprocess.CalledProcessError as e:
+        log.error("Error fetching data from Docker: %s" % e)
+        return False
     images = _parse_docker_ps(docker_ps)
     return images
 

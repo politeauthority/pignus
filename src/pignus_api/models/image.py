@@ -10,36 +10,10 @@ from pignus_api.collects.image_builds import ImageBuilds
 from pignus_api.collects.image_clusters import ImageClusters as CollectImageClusters
 from pignus_api.collects.operations import Operations
 from pignus_api.collects.scans import Scans
-from pignus_api.utils import xlate
 from pignus_api.utils import date_utils
+from pignus_shared.models.image import FIELD_MAP
 from pignus_shared.utils import misc
-
-
-FIELD_MAP = [
-    {
-        'name': 'name',
-        'type': 'str',
-        "extra": "UNIQUE"
-    },
-    {
-        "name": "repositories",
-        "type": "list",
-        "extra": "NOT NULL"
-    },
-    {
-        'name': 'maintained',
-        "type": "bool",
-        "default": True
-    },
-    {
-        'name': 'state',
-        'type': 'str'
-    },
-    {
-        'name': 'state_msg',
-        'type': 'str'
-    },
-]
+from pignus_shared.utils import xlate
 
 
 class Image(BaseEntityMeta):

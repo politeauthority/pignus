@@ -3,7 +3,7 @@ Binds the Role and Perm models to create a role level understanding of Role's ac
 
 """
 from pignus_api.models.base import Base
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 
 FIELD_MAP = [
     {

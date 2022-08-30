@@ -24,6 +24,17 @@ def get_model(image_build_id: int = None):
     return jsonify(data)
 
 
+@ctrl_image_build.route("", methods=["POST"])
+@ctrl_image_build.route("/<image_build_id>", methods=["POST"])
+@auth.auth_request
+def post_model(image_build_id: int = None):
+    """Create a new User."""
+    data = ctrl_base.post_model(ImageBuild, image_build_id)
+    if not isinstance(data, dict):
+        return data
+    return jsonify(data), 201
+
+
 @ctrl_image_build.route("/<image_build_id>", methods=["DELETE"])
 @auth.auth_request
 def delete_model(image_build_id: int = None):

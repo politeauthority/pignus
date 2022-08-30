@@ -87,18 +87,24 @@ def add() -> Response:
     POST /image/add
     """
     request_data = request.get_json()
+    do_create_image = False
+    do_create_image_build = False
     image = Image()
-    image_build = None
 
-    if "name" in request_data:
-        image.get_by_name(request_data["name"])
+    if not image.get_by_name(request_data["name"]):
+        do_create_image = True
+        do_create_image_build = True
     else:
-        image.name = request_data["name"]
-        image.repositories = [request_data["repository"]]
-        image.save()
-        image_build = create_image_build(image, request_data)
+        do_create_image = False
 
-    if not image_build:
+    if do_create_image:
+        image = create_image(request_data)
+
+    image_build = ImageBuild()
+    if not image_build.get_by_digest(request_data["digest"]):
+        do_create_image_build = True
+
+    if do_create_image_build:
         image_build = ImageBuild()
         if not image_build.get_by_digest(request_data["digest"]):
             image_build = create_image_build(image, request_data)
@@ -115,9 +121,18 @@ def add() -> Response:
     return jsonify(data), 201
 
 
-def create_image_build(image: Image, image_url: dict) -> bool:
-    """
-    """
+def create_image(image_url: dict) -> Image:
+    """Create an Image from the image_url."""
+    image = Image()
+    image.name = image_url["name"]
+    image.repositories = [image_url["repository"]]
+    image.save()
+    log.info("Created: %s" % image)
+    return image
+
+
+def create_image_build(image: Image, image_url: dict) -> ImageBuild:
+    """Create an ImageBuild from an Image and the image_url."""
     image_build = ImageBuild()
     image_build.image_id = image.id
     if "digest" in image_url:
@@ -126,7 +141,10 @@ def create_image_build(image: Image, image_url: dict) -> bool:
         image_build.tag = image_url["tag"]
     if "repository" in image_url:
         image_build.repository = image_url["repository"]
+    image_build.scan_flag = True
     image_build.save()
+    log.info("Created: %s" % image_build)
+    return image_build
 
 
 # End File: pignus/src/pignus_api/controllers/ctrl_modles/ctrl_image.py

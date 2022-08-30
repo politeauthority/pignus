@@ -2,8 +2,8 @@
 Model to keep track of CodeBuild jobs that an Image or Container is subjected to.
 
 """
-from pignus_api.utils import xlate
 from pignus_api.models.base import Base
+from pignus_shared.utils import xlate
 
 
 FIELD_MAP = [

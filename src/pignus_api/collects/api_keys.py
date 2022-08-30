@@ -3,7 +3,7 @@
 """
 from pignus_api.collects.base import Base
 from pignus_api.models.api_key import ApiKey
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 
 
 class ApiKeys(Base):

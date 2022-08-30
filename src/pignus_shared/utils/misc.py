@@ -288,4 +288,13 @@ def dynamic_import(the_module: str, the_class: str):
     module = importlib.import_module(the_module)
     return getattr(module, the_class)
 
+
+def short_digest(original_digest: str) -> str:
+    """Get the short version of a Docker container SHA digest.
+    ie: 572030415db278044988e6dd41e3ea414dddd0518b43368352e6e719e2610ecc -> 572030415db2
+    """
+    if original_digest and len(original_digest) > 12:
+        return original_digest[:12]
+    return ""
+
 # End File: politeauthority/pignus/src/pignus_shared/utils/misc.py

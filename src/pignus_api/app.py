@@ -1,10 +1,12 @@
 #!/usr/bin/env python
-#
+"""Pignus Api
 
+"""
 import logging
 
 from flask import Flask, jsonify
 
+from pignus_api.collects.options import Options
 from pignus_api.controllers.ctrl_models.ctrl_image import ctrl_image
 from pignus_api.controllers.ctrl_models.ctrl_image_build import ctrl_image_build
 from pignus_api.controllers.ctrl_models.ctrl_user import ctrl_user
@@ -15,7 +17,6 @@ from pignus_api.controllers.ctrl_collections.ctrl_options import ctrl_options
 from pignus_api.controllers.ctrl_collections.ctrl_users import ctrl_users
 from pignus_api.utils import db
 from pignus_api.utils import glow
-from pignus_api.collects.options import Options
 
 app = Flask(__name__)
 app.config.update(DEBUG=True)
@@ -50,7 +51,6 @@ def debug():
 
 
 if __name__ == "__main__":
-
     glow.db = db.connect()
     glow.options = Options().load_options()
     register_blueprints(app)

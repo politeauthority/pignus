@@ -3,8 +3,8 @@ Base model class for all models requiring meta storage.
 
 """
 from pignus_api.models.base import Base
-from pignus_api.utils import xlate
 from pignus_api.models.entity_meta import EntityMeta
+from pignus_shared.utils import xlate
 
 
 class BaseEntityMeta(Base):

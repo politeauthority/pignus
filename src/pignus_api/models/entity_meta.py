@@ -23,7 +23,7 @@ How to use:
 """
 from pignus_api.models.base import Base
 from pignus_api.utils import date_utils
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 
 
 class EntityMeta(Base):
