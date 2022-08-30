@@ -562,7 +562,14 @@ class Base:
 
             # Sets all class field vars with defaults.
             field_value = getattr(self, field_name, None)
-            if not field_value and field_value != False:
+            if field["type"] == "bool":
+                if field_value == False:
+                    setattr(self, field_name, False)
+                elif field_value:
+                    setattr(self, field_name, True)
+                else:
+                    setattr(self, field_name, default)
+            elif not field_value:
                 setattr(self, field_name, default)
 
         return True

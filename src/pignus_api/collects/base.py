@@ -155,7 +155,13 @@ class Base:
         }
         return ret
 
-    def _generate_paginated_sql(self, page: int, where_and: list, order_by: dict, limit: int) -> str:
+    def _generate_paginated_sql(
+        self,
+        page: int,
+        where_and: list,
+        order_by: dict,
+        limit: int
+    ) -> str:
         """Generate the SQL query for the paginated request.
         :unit-test: TestBase:test___generate_paginated_sql()
         """

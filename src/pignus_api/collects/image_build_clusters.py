@@ -7,7 +7,6 @@ from pignus_api.models.image_build_cluster import ImageBuildCluster
 from pignus_api.utils import xlate
 
 
-
 class ImageBuildClusters(Base):
 
     def __init__(self, conn=None, cursor=None):

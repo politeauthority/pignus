@@ -6,6 +6,7 @@ import os
 
 from pignus_shared.utils import log
 
+
 class PignusClient:
 
     def __init__(self, api_url: str = None, api_client_id: str = None, api_key: str = None):
@@ -39,7 +40,7 @@ class PignusClient:
         """
         :unit-test: TestRest::test____repr__
         """
-        return "<PignusClient>"
+        return "<PignusClient %s>" % self.api_url
 
     def image_add(self, payload: dict = {}) -> dict:
         """Submit a potentially new Image to the Pignus Api, which will be translated to a new

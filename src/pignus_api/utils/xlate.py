@@ -74,9 +74,9 @@ def convert_bool_to_int(value: bool) -> int:
     """
     if isinstance(value, type(None)):
         return None
-    elif value == True:
+    elif value:
         return 1
-    elif value == False:
+    elif not value:
         return 0
     else:
         msg = 'Cannot convert "%s" of type "%s" to int' % (value, type(value))
@@ -179,7 +179,8 @@ def aws_account_docker_url(docker_url: str) -> str:
 
 def get_digest(image_str: str):
     """Extracts the digest from a docer-pullable string as given from the K8 api
-    example image_str: docker-pullable://docker.io/politeauthority/pignus@sha256:d480d804f0c11548d6be95568
+    example image_str: docker-pullable://docker.io/politeauthority/pignus@sha256:\
+        d480d804f0c11548d6be95568
     :unit-test: TestXlate::test__get_digest
     """
     return image_str[image_str.find("@sha256:") + 8:]

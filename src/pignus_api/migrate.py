@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 
-
 from pignus_api.models.user import User
 from pignus_api.models.api_key import ApiKey
 from pignus_api.models.option import Option
@@ -9,6 +8,7 @@ from pignus_api.utils import glow
 from pignus_api.utils import db
 from pignus_api.utils import auth
 from pignus_shared.utils import log
+
 
 def create_user():
     user = User()
@@ -37,6 +37,7 @@ def create_option_defaults():
     option.value = 1
     option.save()
     log.info("Created option: %s" % option)
+
 
 if __name__ == "__main__":
     glow.db = db.connect()

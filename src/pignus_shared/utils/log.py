@@ -60,9 +60,6 @@ def _handle_log(level, message: str, **kwargs):
     the_log = _get_base_log(message, **kwargs)
     the_log["level"] = level
     the_log["level_int"] = _eval_log_numeral(level)
-    # the_log["request"] = _get_api_request_log()
-    # if not the_log["request"]:
-        # the_log.pop("request")
     _handle_dipslay(the_log)
     return True
 

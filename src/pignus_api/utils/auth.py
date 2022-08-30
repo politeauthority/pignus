@@ -36,8 +36,9 @@ def auth_request(f):
         if 'x-api-key' in request.headers:
             api_key = request.headers['x-api-key']
 
-        if not api_key: # throw error if no token provided
-            msg =  "A valid Api Key is missing"
+        # throw error if no token provided
+        if not api_key:
+            msg = "A valid Api Key is missing"
             data["message"] = msg
             log.warning(msg)
             return make_response(jsonify(data), 401)

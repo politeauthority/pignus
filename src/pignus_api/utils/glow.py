@@ -3,12 +3,15 @@
 """
 
 global db
-db = {}
+db = {
+    "NAME": "",
+    "HOST": "",
+}
 
 global options
 options = {}
 
 global general
 general = {
-	"LOG_LEVEL": "INFO"
+    "LOG_LEVEL": "INFO"
 }

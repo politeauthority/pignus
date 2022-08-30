@@ -77,7 +77,13 @@ class EntityMeta(Base):
 
         return True
 
-    def create(self, meta_name: str, meta_type: str, entity_id: int, meta_value: str = None) -> bool:
+    def create(
+        self,
+        meta_name: str,
+        meta_type: str,
+        entity_id: int,
+        meta_value: str = None
+    ) -> bool:
         """Initiate a new EntityMeta object with a name, type and optional value.
 
         :param meta_name: The meta key name for the entity meta.
@@ -96,7 +102,8 @@ class EntityMeta(Base):
 
         # Validate the entity_type, which requires the model to set the `self.table_name` var.
         if not self.entity_type:
-            raise AttributeError("Invalid EntityType type: %s, must set model's self.table_name" % self.entity_type)
+            raise AttributeError(
+                "Invalid EntityType type: %s, must set model's self.table_name" % self.entity_type)
 
         return True
 

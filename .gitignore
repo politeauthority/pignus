@@ -4,6 +4,7 @@ helpers/
 *__pycache__/
 
 docker/pignus-api/src
+docker/pignus-api/tests
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -29,4 +29,4 @@ class Options(Base):
             ret[option.name] = option
         return ret
 
-# End File: pignus/src/pignus_api/collections/options.py
+# End File: pignus/src/pignus_api/collects/options.py

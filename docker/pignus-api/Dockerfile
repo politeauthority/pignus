@@ -12,20 +12,19 @@ ENV PIGNUS_DB_PASS=""
 
 ADD src/ /app
 
-# Dev-Build-Only
-# ADD helpers/pignus-test /bin/
-# ADD helpers/pignus-build /bin/
-
-RUN cd /app && pip3 install -r /app/requirements.txt
-
-# Dev-Build-Only
+# Dev-Build: Pignus-Api,Pignus-Sentry
+ADD tests /tests
+RUN apk add bash
+ADD pignus-build /bin/
 RUN cd /app && pip3 install -r /app/requirements-debug.txt
 
-# Prod-Build: Api
+
+# Prod-Build: Pignus-Api
+RUN cd /app && pip3 install -r /app/requirements.txt
 RUN cd /app && python3 setup.py build
 RUN cd /app && python3 setup.py install
 
-# Prod-Build: 
+# Prod-Build: Pignus-Sentry
 RUN apk add docker
 
 

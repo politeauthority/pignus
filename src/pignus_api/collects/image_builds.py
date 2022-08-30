@@ -141,34 +141,34 @@ class ImageBuilds(BaseEntityMetas):
             image_ids.append(raw[0])
         return image_ids
 
-    # def get_image_ids_for_sentry_rectify_clusters(self) -> list:
-    #     """Get Image IDs for Sentry the Rectify Cluster's operation. We're looking for ImageBuilds
-    #     that are currently marked as being present in a cluster, but their last seen value for that
-    #     cluster is before our `cluster_presence_interval_hours` value.
-    #     """
-    #     interval = 24
-    #     # since = date_utils.date_hours_ago(self.cluster_interval_hours)
-    #     since = date_utils.date_hours_ago(interval)
-    #     sql = """
-    #         SELECT DISTINCT(`image_id`)
-    #         FROM `image_builds`
-    #         WHERE
-    #             `present` = 1 AND
-    #             `last_seen` <= "%s"
-    #         """ % since
-    #     self.cursor.execute(sql)
-    #     raw_build_ids = self.cursor.fetchall()
+    def get_image_ids_for_sentry_rectify_clusters(self) -> list:
+        """Get Image IDs for Sentry the Rectify Cluster's operation. We're looking for
+        ImageBuilds that are currently marked as being present in a cluster, but their
+        last seen value for that cluster is before our `cluster_presence_interval_hours` value.
+        """
+        interval = 24
+        # since = date_utils.date_hours_ago(self.cluster_interval_hours)
+        since = date_utils.date_hours_ago(interval)
+        sql = """
+            SELECT DISTINCT(`image_id`)
+            FROM `image_builds`
+            WHERE
+                `present` = 1 AND
+                `last_seen` <= "%s"
+            """ % since
+        self.cursor.execute(sql)
+        raw_build_ids = self.cursor.fetchall()
 
-    #     build_ids = []
-    #     for raw in raw_build_ids:
-    #         build_ids.append(raw[0])
+        build_ids = []
+        for raw in raw_build_ids:
+            build_ids.append(raw[0])
 
-    #     image_builds = self.get_by_ids(build_ids)
+        image_builds = self.get_by_ids(build_ids)
 
-    #     image_ids = []
-    #     for image_build in image_builds:
-    #         image_ids.append(image_build.image_id)
-    #     return image_ids
+        image_ids = []
+        for image_build in image_builds:
+            image_ids.append(image_build.image_id)
+        return image_ids
 
     def get_image_ids_missing_auth(self) -> list:
         """Get all ImageBuilds with Ecr sync fails."""

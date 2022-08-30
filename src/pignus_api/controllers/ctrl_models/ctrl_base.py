@@ -1,14 +1,10 @@
 """Controller Model - Base
 
 """
-
-from flask import Blueprint, make_response, request, jsonify
-
-from pignus_shared.utils import misc
-from pignus_shared.utils import log
+from flask import make_response, request, jsonify
 
 
-def get_model(model, entity_id: int=None) -> dict:
+def get_model(model, entity_id: int = None) -> dict:
     """Base GET operation for a model.
     :unit-test: TestCtrlModelsBase::test__get_model
     """
@@ -28,12 +24,12 @@ def get_model(model, entity_id: int=None) -> dict:
         data["message"] = "Could not find Entity"
         return make_response(jsonify(data), 404)
 
-    data["status"] ="Success"    
+    data["status"] = "Success"
     data["object"] = entity.json()
     return data
 
 
-def post_model(model, entity_id: int=None):
+def post_model(model, entity_id: int = None):
     """Base POST operation for a model. Create or modify a entity."""
     data = {
         "status": "Error"
@@ -56,9 +52,9 @@ def post_model(model, entity_id: int=None):
             search_id = request_data[entity_id_field]
 
         if not entity.get_by_id(search_id):
-            resp_data["status"] = "Error"
-            resp_data["message"] = "Could not find User ID: %s" % user_id
-            return jsonify(resp_data), 404
+            data["status"] = "Error"
+            data["message"] = "Could not find %s ID: %s" % (entity.model_name, entity_id)
+            return jsonify(data), 404
 
     data["object"] = entity.json()
     data["object_type"] = entity.model_name
@@ -89,7 +85,6 @@ def delete_model(model, entity_id: int):
     data["message"] = "User deleted successfully"
     data["object"] = entity.json()
     return data
-
 
 
 # End File: pignus/src/pignus_api/controllers/ctrl_modles/ctrl_base.py

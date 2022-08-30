@@ -23,6 +23,7 @@ class PignusSentry:
         for image in requset_data["objects"]:
             log.info("%s\t-%s" % (image["id"], image["name"]))
 
+
 if __name__ == "__main__":
     PignusSentry().run()
 

@@ -38,11 +38,11 @@ class Migrate:
             - Creating default RBAC relationships
             - Creating an admin user if one doesnt exist
         """
-        log.info("Running migrations on %s" % settings.server["DATABASE"]["NAME"])
+        log.info("Running migrations on %s" % glow.db["NAME"])
         self.create_database()
-        self.conn, self.cursor = db.connect_mysql(settings.server["DATABASE"])
-        settings.db["conn"] = self.conn
-        settings.db["cursor"] = self.cursor
+        self.conn, self.cursor = db.connect_mysql(glow.db["NAME"])
+        glow.db["conn"] = self.conn
+        glow.db["cursor"] = self.cursor
         self.setup()
         self.run_sql_migrations()
         self.create_keys()
@@ -54,8 +54,8 @@ class Migrate:
 
     def create_database(self) -> bool:
         """Create the Pignus schema if it does not exist. """
-        conn, cursor = db.connect_mysql_no_db(settings.server["DATABASE"])
-        db.create_mysql_database(conn, cursor, settings.server["DATABASE"]["NAME"])
+        conn, cursor = db.connect_mysql_no_db(glow.db)
+        db.create_mysql_database(conn, cursor, glow.db["NAME"])
         return True
 
     def setup(self) -> bool:
@@ -142,8 +142,8 @@ class Migrate:
         self.auth = Auth()
         self.auth.generate_keys(overwrite=False)
         misc_server.set_keys()
-        self.auth.public_key = settings.server["KEYS"]["PUBLIC"]
-        self.auth.private_key = settings.server["KEYS"]["PRIVATE"]
+        self.auth.public_key = glow.db["KEYS"]["PUBLIC"]
+        self.auth.private_key = glow.db["KEYS"]["PRIVATE"]
         return True
 
     def create_options(self):

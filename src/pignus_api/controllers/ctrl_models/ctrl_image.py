@@ -17,7 +17,7 @@ ctrl_image = Blueprint('image', __name__, url_prefix='/image')
 @ctrl_image.route("")
 @ctrl_image.route("/<image_id>")
 @auth.auth_request
-def get_model(image_id: int=None) -> Response:
+def get_model(image_id: int = None) -> Response:
     """GET operation for a Image.
     GET /image
     """
@@ -31,7 +31,7 @@ def get_model(image_id: int=None) -> Response:
 @ctrl_image.route("", methods=["POST"])
 @ctrl_image.route("/<image_id>", methods=["POST"])
 @auth.auth_request
-def post_model(image_id: int=None):
+def post_model(image_id: int = None):
     """POST operation for a Image.
     """
     resp_data = {
@@ -61,8 +61,7 @@ def post_model(image_id: int=None):
     print(image)
 
     print(image_parsed)
-    print("\n\n"
-        )
+    print("\n\n")
     resp_data["ext"] = image_parsed
     resp_data["object"] = image.json()
     return jsonify(resp_data)
@@ -70,7 +69,7 @@ def post_model(image_id: int=None):
 
 @ctrl_image.route("/<image_id>", methods=["DELETE"])
 @auth.auth_request
-def delete_model(image_id: int=None) -> Response:
+def delete_model(image_id: int = None) -> Response:
     """DELETE opperation for a Image.
     DELETE /image
     """
@@ -115,7 +114,8 @@ def add() -> Response:
 
     return jsonify(data), 201
 
-def create_image_build(image, image_url):
+
+def create_image_build(image: Image, image_url: dict) -> bool:
     """
     """
     image_build = ImageBuild()
