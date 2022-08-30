@@ -8,7 +8,7 @@ from urllib.parse import unquote, quote
 
 from sqlescapy import sqlescape
 
-from pignus_api.utils import log
+from pignus_shared.utils import log
 
 
 def url_decode(encoded_str: str) -> str:

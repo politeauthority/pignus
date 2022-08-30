@@ -4,8 +4,8 @@
 
 from flask import Blueprint, make_response, request, jsonify
 
-from pignus_api.utils import misc
-from pignus_api.utils import log
+from pignus_shared.utils import misc
+from pignus_shared.utils import log
 
 
 def get_model(model, entity_id: int=None) -> dict:
@@ -89,7 +89,6 @@ def delete_model(model, entity_id: int):
     data["message"] = "User deleted successfully"
     data["object"] = entity.json()
     return data
-
 
 
 

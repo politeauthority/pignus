@@ -20,6 +20,8 @@ setup(
         "pignus_api.utils",
         "pignus_client",
         "pignus_sentry",
+        "pignus_shared",
+        "pignus_shared.utils",
     ],
     # scripts=["scripts/pignus"],
 )

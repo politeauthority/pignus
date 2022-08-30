@@ -6,9 +6,9 @@ from flask import Blueprint, request, jsonify
 
 from pignus_api.controllers.ctrl_models import ctrl_base
 from pignus_api.models.user import User
-from pignus_api.utils import misc
-from pignus_api.utils import log
 from pignus_api.utils import auth
+from pignus_shared.utils import misc
+from pignus_shared.utils import log
 
 
 ctrl_user = Blueprint('user', __name__, url_prefix='/user')

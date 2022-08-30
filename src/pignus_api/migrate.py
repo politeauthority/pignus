@@ -7,8 +7,7 @@ from pignus_api.models.api_key import ApiKey
 from pignus_api.utils import glow
 from pignus_api.utils import db
 from pignus_api.utils import auth
-from pignus_api.utils import log
-
+from pignus_shared.utils import log
 
 def create_user():
     user = User()

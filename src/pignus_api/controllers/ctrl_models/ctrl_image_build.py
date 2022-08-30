@@ -7,7 +7,7 @@ from flask import Blueprint, request, jsonify, Response
 from pignus_api.controllers.ctrl_models import ctrl_base
 from pignus_api.models.image import Image
 from pignus_api.utils import auth
-from pignus_api.utils import misc
+from pignus_shared.utils import misc
 
 ctrl_image_build = Blueprint('image_build', __name__, url_prefix='/image-build')
 
@@ -38,4 +38,4 @@ def delete_model(image_build_id: int=None) -> Response:
 	return jsonify(data), 201
 
 
-# End File: pignus/src/pignus_api/controllers/ctrl_modles/ctrl_image.py
+# End File: pignus/src/pignus_api/controllers/ctrl_modles/ctrl_image_build.py

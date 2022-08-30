@@ -5,9 +5,9 @@
 from flask import Blueprint, request, jsonify
 
 from pignus_api.models.api_key import ApiKey
-from pignus_api.utils import misc
-from pignus_api.utils import log
 from pignus_api.utils import auth
+from pignus_shared.utils import misc
+from pignus_shared.utils import log
 
 
 ctrl_api_key = Blueprint('api-key', __name__, url_prefix='/api-key')

@@ -10,7 +10,7 @@ from flask import request, make_response, jsonify
 from werkzeug import security
 
 from pignus_api.models.user import User
-from pignus_api.utils import log
+from pignus_shared.utils import log
 
 
 def auth_request(f):

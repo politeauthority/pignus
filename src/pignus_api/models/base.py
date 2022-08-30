@@ -15,8 +15,8 @@ import arrow
 
 from pignus_api.utils import date_utils
 from pignus_api.utils import xlate
-from pignus_api.utils import log
 from pignus_api.utils import glow
+from pignus_shared.utils import log
 
 
 class Base:

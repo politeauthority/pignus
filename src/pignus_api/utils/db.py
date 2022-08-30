@@ -1,7 +1,7 @@
 import pymysql.cursors
 
+from pignus_shared.utils import log
 
-from pignus_api.utils import log
 
 PIGNUS_DB_HOST="192.168.50.6"
 PIGNUS_DB_PORT=int("3307")

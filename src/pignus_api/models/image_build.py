@@ -10,8 +10,8 @@ from pignus_api.collects.operations import Operations
 from pignus_api.collects.scans import Scans
 from pignus_api.utils import xlate
 from pignus_api.utils import date_utils
-from pignus_api.utils import misc
 from pignus_api.utils import glow
+from pignus_shared.utils import misc
 
 
 FIELD_MAP = [

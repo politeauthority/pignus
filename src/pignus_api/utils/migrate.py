@@ -7,7 +7,6 @@ import os
 from pignus_api.models.option import Option
 from pignus_api.models.scanner import Scanner
 from pignus_api.models.migration import Migration as MigrationModel
-from pignus_api.utils import log
 from pignus_api.utils import db
 from pignus_api.utils import misc_server
 from pignus_api.utils.rbac import Rbac
@@ -15,6 +14,7 @@ from pignus_api.utils.auth import Auth
 from pignus_api.utils import glow
 from pignus_api import image_add
 from pignus_api.version import __version__
+from pignus_shared.utils import log
 
 
 class Migrate:
