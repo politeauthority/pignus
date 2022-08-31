@@ -5,6 +5,7 @@ from datetime import datetime
 
 import arrow
 
+from pignus_shared.utils import log
 from pignus_shared.utils import xlate
 
 
@@ -28,6 +29,11 @@ class Base:
                 'type': 'datetime',
             }
         ]
+        self.field_map = []
+
+    def __repr__(self):
+        """Base class representation"""
+        return "<Base>"
 
     def get_by_id(self, model_id):
         self.request("/image/%s" % model_id)
@@ -35,14 +41,27 @@ class Base:
     def build_from_dict(self, raw: dict) -> bool:
         """Build a model from a raw dictionary."""
         for field_name, field_value in raw.items():
+            if isinstance(field_value, dict):
+                continue
             if hasattr(self, field_name):
+                print("setting: %s to %s" % (field_name, field_value))
                 setattr(self, field_name, field_value)
+        # import ipdb; ipdb.set_trace()
         return True
 
     def setup(self):
         """Setup the model with all class vars set and defaults applied."""
-        self.total_map = self.base_map + self.field_map
+        log.info("Running Setup")
+        self._create_total_map()
         self._set_defaults()
+        self._set_types()
+
+    def _create_total_map(self) -> bool:
+        """Create total field map for the model.
+        :unit-test: TestClientModelBase::test___create_total_map
+        """
+        self.total_map = self.base_map + self.field_map
+        return True
 
     def _set_defaults(self) -> bool:
         """Set the defaults for the class field vars and populates the self.field_list var

@@ -1,11 +1,17 @@
-"""Util Docker
-Utilities for working with the Docker engine.
+"""Pignus-Shared: Util - Docker
+Utilities for working with the Docker engine locally.
 
 """
 import subprocess
 
 from pignus_shared.utils import log
 from pignus_shared.utils import misc
+
+
+def run_trivy_scan(image_str: str):
+    trivy_image = "aquasec/trivy:0.18.3"
+    cmd = "docker run --rm %s %s" % (trivy_image, image_str)
+    print(cmd)
 
 
 def get_host_docker_images() -> list:

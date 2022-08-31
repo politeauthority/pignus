@@ -297,4 +297,18 @@ def short_digest(original_digest: str) -> str:
         return original_digest[:12]
     return ""
 
+
+def docker_url(image, image_build) -> str:
+    """Create the best possible url for a container based on the information the Image and
+    ImageBuild contain.
+    """
+    docker_url = "%(repository)s%(name)s:%(tag)s%(digest)s" % {
+        "repository": image_build.repository,
+        "name": image.name,
+        "tag": image_build.tag,
+        "digest": "@sha256:%s" % image_build.digest
+    }
+    return docker_url
+
+
 # End File: politeauthority/pignus/src/pignus_shared/utils/misc.py
