@@ -10,7 +10,7 @@ import math
 import arrow
 
 from pignus_api.utils import glow
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 from pignus_shared.utils import log
 
 

@@ -36,79 +36,44 @@ class ImageBuilds(BaseEntityMetas):
         #     build.get_last_scan()
         return prestines
 
-    def get_image_ids_for_sentry_sync_flagged(self) -> list:
-        """Get all ImageBuilds that are maintained and flagged for scan."""
-        sql = """
-            SELECT distinct(`image_id`)
-            FROM `image_builds`
-            WHERE
-                `maintained` = 1 AND
-                `sync_flag` = 1
-            ORDER BY `image_id` ASC;
-        """
-        self.cursor.execute(sql)
-        raws = self.cursor.fetchall()
-        if not raws:
-            return []
-        image_ids = []
-        for raw in raws:
-            image_ids.append(raw[0])
-        return image_ids
+    # def get_image_ids_for_sentry_sync_flagged(self) -> list:
+    #     """Get all ImageBuilds that are maintained and flagged for scan."""
+    #     sql = """
+    #         SELECT distinct(`image_id`)
+    #         FROM `image_builds`
+    #         WHERE
+    #             `maintained` = 1 AND
+    #             `sync_flag` = 1
+    #         ORDER BY `image_id` ASC;
+    #     """
+    #     self.cursor.execute(sql)
+    #     raws = self.cursor.fetchall()
+    #     if not raws:
+    #         return []
+    #     image_ids = []
+    #     for raw in raws:
+    #         image_ids.append(raw[0])
+    #     return image_ids
 
-    def get_image_ids_for_sentry_sync(self) -> list:
-        """Get all ImageBuilds that are maintained and flagged for sync.
-        @todo: this has been broken
+    def get_for_sentry_sync(self) -> list:
+        """Get all ImageBuilds for sentry sync. Current logic states that we collect ImageBuilds
+        that are maintained and flagged for sync.
         """
         since = date_utils.date_hours_ago(self.cluster_interval_hours)
         sql = """
-            SELECT distinct(`image_id`)
-            FROM `image_builds`
-            WHERE
-                `maintained` = 1 AND
-                `sync_enabled` = 1 AND
-                `sync_last_ts` <= "%s"
-            ORDER BY `image_id` ASC;
-            """ % (since)
-        self.cursor.execute(sql)
-        raws = self.cursor.fetchall()
-        if not raws:
-            return []
-        image_ids = []
-        for raw in raws:
-            image_ids.append(raw[0])
-        return image_ids
-
-    def get_image_ids_for_sentry_scan(self) -> list:
-        """Get all ImageBuilds that are
-            - maintained
-            - scan_enabled
-            - @note: temporarily NOT from PROD ecr
-            - Have either
-                - scan_flag = True
-                - scan_last_ts = happened more then self.scan_interval_hours ago
-        @todo: this has been broken
-        """
-        since = date_utils.date_hours_ago(self.scan_interval_hours)
-        sql = """
-            SELECT distinct(`image_id`)
+            SELECT *
             FROM `image_builds`
             WHERE
                 `maintained` = 1 AND
                 `scan_enabled` = 1 AND
-                (
-                    `scan_flag` = 1 OR
-                    `scan_last_ts` <= "%s"
-                )
+                (`scan_last_ts` IS NULL OR`sync_last_ts` <= "%s")
             ORDER BY `image_id` ASC;
             """ % (since)
         self.cursor.execute(sql)
         raws = self.cursor.fetchall()
         if not raws:
             return []
-        image_ids = []
-        for raw in raws:
-            image_ids.append(raw[0])
-        return image_ids
+        return self.build_from_lists(raws)
 
     def get_image_ids_for_sentry_rectify_sync(self) -> list:
         """Get all ImageBuilds that are maintained and flagged for sync"""
@@ -200,4 +165,4 @@ class ImageBuilds(BaseEntityMetas):
         raw_scans_count = self.cursor.fetchone()
         return raw_scans_count[0]
 
-# End File: politeauthority/pignus/src/pignus_api/collections/image_builds.py
+# End File: pignus/src/pignus_api/collections/image_builds.py

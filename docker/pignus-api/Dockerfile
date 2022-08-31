@@ -14,7 +14,7 @@ ADD src/ /app
 
 # Dev-Build: Pignus-Api,Pignus-Sentry
 ADD tests /tests
-RUN apk add bash
+RUN apk add bash vim
 ADD pignus-build /bin/
 RUN cd /app && pip3 install -r /app/requirements-debug.txt
 

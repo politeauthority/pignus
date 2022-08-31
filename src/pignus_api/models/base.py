@@ -14,9 +14,9 @@ from datetime import datetime
 import arrow
 
 from pignus_api.utils import date_utils
-from pignus_api.utils import xlate
 from pignus_api.utils import glow
 from pignus_shared.utils import log
+from pignus_shared.utils import xlate
 
 
 class Base:

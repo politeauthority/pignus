@@ -2,7 +2,7 @@
 
 """
 from pignus_api.models.base import Base
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 
 
 FIELD_MAP = [

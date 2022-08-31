@@ -31,17 +31,22 @@ def create_user():
 
 
 def create_option_defaults():
+    # option = Option()
+    # option.name = "DEFAULT_SCANNER"
+    # option.type = "str"
+    # option.value = 1
+    # option.save()
     option = Option()
-    option.name = "DEFAULT_SCANNER"
+    option.name = "TRIVY_VERSION"
     option.type = "str"
-    option.value = 1
+    option.value = "aquasec/trivy:0.18.3"
     option.save()
     log.info("Created option: %s" % option)
 
 
 if __name__ == "__main__":
     glow.db = db.connect()
-    # create_option_defaults()
+    create_option_defaults()
     # create_user()
 
 

@@ -8,80 +8,11 @@ from pignus_api.models.entity_meta import EntityMeta
 from pignus_api.collects.image_build_clusters import ImageBuildClusters
 from pignus_api.collects.operations import Operations
 from pignus_api.collects.scans import Scans
-from pignus_api.utils import xlate
 from pignus_api.utils import date_utils
 from pignus_api.utils import glow
+from pignus_shared.models.image_build import FIELD_MAP
 from pignus_shared.utils import misc
-
-
-FIELD_MAP = [
-    {
-        "name": "digest",
-        "type": "str",
-        "extra": "UNIQUE"
-    },
-    {
-        "name": "digest_local",
-        "type": "str",
-    },
-    {
-        "name": "image_id",
-        "type": "int",
-        "extra": "NOT NULL"
-    },
-    {
-        "name": "repository",
-        "type": "str",
-        "extra": "NOT NULL"
-    },
-    {
-        "name": "tags",
-        "type": "list"
-    },
-    {
-        "name": "maintained",
-        "type": "bool",
-        "default": True
-    },
-    {
-        "name": "state",
-        "type": "str"
-    },
-    {
-        "name": "state_msg",
-        "type": "str"
-    },
-    {
-        "name": "sync_flag",
-        "type": "bool"
-    },
-    {
-        "name": "sync_enabled",
-        "type": "bool",
-        "default": True,
-    },
-    {
-        "name": "sync_last_ts",
-        "type": "datetime",
-    },
-    {
-        "name": "scan_flag",
-        "type": "bool"
-    },
-    {
-        "name": "scan_enabled",
-        "type": "bool",
-        "default": True,
-    },
-    {
-        "name": "scan_last_ts",
-        "type": "datetime",
-    },
-    {
-        "name": "pending_operation",
-        "type": "str",
-    },
-]
+from pignus_shared.utils import xlate
 
 
 class ImageBuild(BaseEntityMeta):
@@ -130,9 +61,7 @@ class ImageBuild(BaseEntityMeta):
         """Get the short digest of a ImageBuild. These are often used is Docker.
         :unit-test: TestImageBuild::test__short_digest
         """
-        if self.digest:
-            return self.digest[:12]
-        return ""
+        return misc.short_digest(self.digest)
 
     def get_clusters(self) -> dict:
         """Get all ImageBuild Cluster data"""

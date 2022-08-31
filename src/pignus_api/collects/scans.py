@@ -1,13 +1,9 @@
 """Scans Collection
 
-Testing
-    1/1 Unit-Tested
-    100% Test Coverage!
-
 """
 from pignus_api.collects.base_entity_metas import BaseEntityMetas
 from pignus_api.models.scan import Scan
-from pignus_api.utils import xlate
+from pignus_shared.utils import xlate
 
 
 class Scans(BaseEntityMetas):

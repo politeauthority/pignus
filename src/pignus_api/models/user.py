@@ -6,9 +6,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from pignus_api.collects.api_keys import ApiKeys
 from pignus_api.models.base_entity_meta import BaseEntityMeta
 from pignus_api.models.role import Role
-from pignus_api.utils import xlate
 from pignus_shared.utils import misc
 from pignus_shared.utils import log
+from pignus_shared.utils import xlate
 
 
 FIELD_MAP = [

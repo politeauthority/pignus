@@ -4,6 +4,8 @@
 import requests
 import os
 
+from pignus_client.models.image import Image
+from pignus_client.models.image_build import ImageBuild
 from pignus_shared.utils import log
 
 
@@ -38,7 +40,6 @@ class PignusClient:
 
     def __repr__(self):
         """
-        :unit-test: TestRest::test____repr__
         """
         return "<PignusClient %s>" % self.api_url
 
@@ -49,12 +50,49 @@ class PignusClient:
         response = self.request("image/add", payload, "POST")
         return response
 
+    def image_get_by_id(self, image_id: int) -> dict:
+        """Get Images on the Pignus Api, against /image/{image_id}
+        """
+        response = self.request("image/%s" % image_id)
+        return response
+
     def images_get(self, payload: dict = {}) -> dict:
         """Get Images on the Pignus Api, against /images
         :unit-test: TestRest:test__images_get
         """
         response = self.request("images", payload)
         return response
+
+    def image_builds_get_for_scan(self, payload: dict = {}) -> dict:
+        """Get Images on the Pignus Api, against /images
+        :unit-test: TestRest:test__images_get
+        """
+        response = self.request("image-builds/for-scan", payload)
+        return response
+
+    def object_get_by_id(self, entity_name: str, entity_id: int):
+        """Get a supported model back from the Pignus Api."""
+        supported_entities = ["image", "image_build"]
+        if entity_name not in supported_entities:
+            log.error("Not supported entity for object_get_by_id: %s" % entity_name)
+            return False
+        response = self.request("%s/%s" % (entity_name, entity_id))
+        print(response.url)
+        if response.status_code != 200:
+            log.warning("Could not find %s with ID %s" % (entity_name, entity_id))
+            return False
+
+        response_json = response.json()
+        ret = None
+        if entity_name == "image":
+            ret = Image()
+        elif entity_name == "image_build":
+            ret = ImageBuild()
+
+        # import ipdb; ipdb.set_trace()
+        ret.build_from_dict(response_json["object"])
+
+        return ret
 
     def request(
         self, url: str, payload: dict = {}, method: str = "GET"

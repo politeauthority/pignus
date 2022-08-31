@@ -19,5 +19,5 @@ cd /app
 flake8
 
 echo "Running tests"
-cd /tests/unit/pignus_api
-pytest --cov=pignus_api
+cd /tests/unit
+pytest --cov=pignus_api --cov=pignus_client

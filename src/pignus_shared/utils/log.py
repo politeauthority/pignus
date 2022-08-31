@@ -8,8 +8,8 @@ import sys
 
 from rich import print as pprint
 
-from pignus_api.utils import xlate
 from pignus_api.utils import glow
+from pignus_shared.utils import xlate
 
 
 def debug(message: str, **kwargs):
