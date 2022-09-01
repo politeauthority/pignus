@@ -35,4 +35,22 @@ class TestClientModelBase:
 		assert base._create_total_map()
 		assert base.total_map[3]["name"] == "extra_field"
 
+	def test___set_defaults(self):
+		"""
+		:method: Base()._set_defaults()
+		"""
+		base = Base()
+		base.field_map = [
+            {
+                "name": "extra_field",
+                "type": "int",
+            }
+		]
+		base._create_total_map()
+		assert base._set_defaults()
+		assert hasattr(base, "id")
+		assert hasattr(base, "created_ts")
+		assert hasattr(base, "updated_ts")
+		
+
 # End File: pignus/tests/pignus_client/models/test_base.py
