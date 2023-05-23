@@ -10,4 +10,4 @@ sqlescapy==1.0.1
 validators==0.18.2
 
 # Pignus Client
-requests==2.25.1
+requests==2.31.0
